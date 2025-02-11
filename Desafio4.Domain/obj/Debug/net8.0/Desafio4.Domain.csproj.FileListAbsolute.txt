@@ -1,0 +1,11 @@
+/Users/andrehenriiques/Documents/projetos/desafio4/Desafio4.Domain/bin/Debug/net8.0/Desafio4.Domain.deps.json
+/Users/andrehenriiques/Documents/projetos/desafio4/Desafio4.Domain/bin/Debug/net8.0/Desafio4.Domain.dll
+/Users/andrehenriiques/Documents/projetos/desafio4/Desafio4.Domain/bin/Debug/net8.0/Desafio4.Domain.pdb
+/Users/andrehenriiques/Documents/projetos/desafio4/Desafio4.Domain/obj/Debug/net8.0/Desafio4.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/andrehenriiques/Documents/projetos/desafio4/Desafio4.Domain/obj/Debug/net8.0/Desafio4.Domain.AssemblyInfoInputs.cache
+/Users/andrehenriiques/Documents/projetos/desafio4/Desafio4.Domain/obj/Debug/net8.0/Desafio4.Domain.AssemblyInfo.cs
+/Users/andrehenriiques/Documents/projetos/desafio4/Desafio4.Domain/obj/Debug/net8.0/Desafio4.Domain.csproj.CoreCompileInputs.cache
+/Users/andrehenriiques/Documents/projetos/desafio4/Desafio4.Domain/obj/Debug/net8.0/Desafio4.Domain.dll
+/Users/andrehenriiques/Documents/projetos/desafio4/Desafio4.Domain/obj/Debug/net8.0/refint/Desafio4.Domain.dll
+/Users/andrehenriiques/Documents/projetos/desafio4/Desafio4.Domain/obj/Debug/net8.0/Desafio4.Domain.pdb
+/Users/andrehenriiques/Documents/projetos/desafio4/Desafio4.Domain/obj/Debug/net8.0/ref/Desafio4.Domain.dll
