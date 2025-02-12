@@ -6,18 +6,11 @@ namespace desafio4.Controllers;
 
 [Route("api/[controller]")]
 [ApiController] 
-public class NomeController : ControllerBase
+public class NomeController(IPersonService personService) : ControllerBase
 {
-    private readonly IPersonService _personService;
-
-    public NomeController(IPersonService personService)
-    {
-        _personService = personService;
-    }
-
     [HttpGet]
-    public List<Person> ListNames()
+    public IActionResult ListNames()
     {
-        return _personService.GetAll();
+        return Ok(personService.GetAll());
     }
 }

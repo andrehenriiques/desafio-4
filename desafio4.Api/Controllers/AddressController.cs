@@ -6,18 +6,19 @@ namespace desafio4.Controllers;
 
 [Route("api/[controller]")]
 [ApiController] 
-public class AddressController : ControllerBase
+public class AddressController(IViaCepRepository viacepRepository) : ControllerBase
 {
-    private readonly IViaCepRepository _viacepRepository;
-
-    public AddressController(IViaCepRepository viacepRepository)
-    {
-        _viacepRepository = viacepRepository;
-    }
-
     [HttpGet("AddressByIdUser")]
-    public Task<ViaCepDto> ListNames([FromQuery] int id)
+    public async Task<IActionResult> ListNames([FromQuery] int id)
     {
-        return _viacepRepository.GetUserAddressByUserId(id);
+        try
+        {
+            var result = await viacepRepository.GetUserAddressByUserId(id);
+            return Ok(result);
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(500, ex.Message);
+        }
     }
 }

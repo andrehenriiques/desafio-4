@@ -15,3 +15,4 @@
 /Users/andrehenriiques/Documents/projetos/desafio4/Desafio4.Application/obj/Debug/net8.0/refint/Desafio4.Application.dll
 /Users/andrehenriiques/Documents/projetos/desafio4/Desafio4.Application/obj/Debug/net8.0/Desafio4.Application.pdb
 /Users/andrehenriiques/Documents/projetos/desafio4/Desafio4.Application/obj/Debug/net8.0/ref/Desafio4.Application.dll
+/Users/andrehenriiques/Documents/projetos/desafio4/Desafio4.Application/obj/Debug/net8.0/Desafio4.Application.sourcelink.json

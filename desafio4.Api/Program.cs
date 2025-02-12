@@ -12,15 +12,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IPersonService, PersonService>();
-const string baseUrl = "https://viacep.com.br/ws"; // ou outro valor configurado dinamicamente
-EventHandler? onUnauthorizedResponse = (sender, args) =>
-{
-    Console.WriteLine("Resposta não autorizada!");
-};
+const string baseUrl = "https://viacep.com.br/ws";
 
-builder.Services.AddScoped<IViaCepRepository>(provider =>
-    new ViaCepRepository(baseUrl, onUnauthorizedResponse)
-);
+builder.Services.AddScoped<IViaCepRepository>(provider => new ViaCepRepository(baseUrl, null));
 
 builder.Services.AddScoped<IAddressService, AddressService>();
 

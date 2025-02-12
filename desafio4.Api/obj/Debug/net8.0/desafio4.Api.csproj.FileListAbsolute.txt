@@ -40,3 +40,4 @@
 /Users/andrehenriiques/Documents/projetos/desafio4/desafio4.Api/obj/Debug/net8.0/desafio4.Api.genruntimeconfig.cache
 /Users/andrehenriiques/Documents/projetos/desafio4/desafio4.Api/obj/Debug/net8.0/ref/desafio4.Api.dll
 /Users/andrehenriiques/Documents/projetos/desafio4/desafio4.Api/bin/Debug/net8.0/Address.json
+/Users/andrehenriiques/Documents/projetos/desafio4/desafio4.Api/obj/Debug/net8.0/desafio4.Api.sourcelink.json

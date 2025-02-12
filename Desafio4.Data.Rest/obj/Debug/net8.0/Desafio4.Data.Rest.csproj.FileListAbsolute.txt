@@ -13,3 +13,4 @@
 /Users/andrehenriiques/Documents/projetos/desafio4/Desafio4.Data.Rest/obj/Debug/net8.0/refint/Desafio4.Data.Rest.dll
 /Users/andrehenriiques/Documents/projetos/desafio4/Desafio4.Data.Rest/obj/Debug/net8.0/Desafio4.Data.Rest.pdb
 /Users/andrehenriiques/Documents/projetos/desafio4/Desafio4.Data.Rest/obj/Debug/net8.0/ref/Desafio4.Data.Rest.dll
+/Users/andrehenriiques/Documents/projetos/desafio4/Desafio4.Data.Rest/obj/Debug/net8.0/Desafio4.Data.Rest.sourcelink.json

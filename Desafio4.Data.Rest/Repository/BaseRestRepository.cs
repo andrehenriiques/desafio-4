@@ -3,22 +3,12 @@ using RestSharp;
 
 namespace Desafio4.Data.Rest.Repository;
 
-public class BaseRestRepository
-{
-    protected int RequestTimeout { get; set; }
-    public EventHandler? OnUnauthorizedResponse;
-    protected readonly RestClient Client;
-
-    public BaseRestRepository(string baseUrl, EventHandler? onUnauthorizedResponse)
+public class BaseRestRepository(string baseUrl, EventHandler? onUnauthorizedResponse)
+{ 
+    protected readonly RestClient Client = new(new RestClientOptions(baseUrl)
     {
-        RequestTimeout = 10;
-        OnUnauthorizedResponse = onUnauthorizedResponse;
-
-        Client = new RestClient(new RestClientOptions(baseUrl)
-        {
-            ThrowOnDeserializationError = false
-        });
-    }
+        ThrowOnDeserializationError = false
+    });
 
     protected async Task<T> ExecuteOrThrowAsync<T>(RestRequest request , bool throwException = false)
     {
@@ -26,7 +16,7 @@ public class BaseRestRepository
 
         if (response.StatusCode == HttpStatusCode.Unauthorized)
         {
-            OnUnauthorizedResponse?.Invoke(response, EventArgs.Empty);
+            onUnauthorizedResponse?.Invoke(response, EventArgs.Empty);
         }
 
         if (response.ErrorException != null && throwException)
