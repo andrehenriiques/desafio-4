@@ -5,10 +5,9 @@ using JsonSerializer = System.Text.Json.JsonSerializer;
 
 namespace Desafio4.Data.Rest.Repository;
 
-public class ViaCepRepository(string baseUrl, EventHandler? onUnauthorizedResponse)
-    : BaseRestRepository(baseUrl, onUnauthorizedResponse), IViaCepRepository
+public class ViaCepRepository
+    : BaseRestRepository, IViaCepRepository
 {
-    private readonly string _baseUrl = baseUrl;
 
     public async Task<ViaCepDto> GetUserAddressByUserId(int id)
     {
@@ -19,14 +18,9 @@ public class ViaCepRepository(string baseUrl, EventHandler? onUnauthorizedRespon
         {
             throw new InvalidOperationException("CEP não encontrado para o ID fornecido.");
         }
-        var urlCep = $"{_baseUrl}/{cep}/json";
-        var client = new RestClient();
+        var urlCep = $"/{cep}/json";
         var request = new RestRequest(urlCep);
-        var response = await client.ExecuteAsync<ViaCepDto>(request);
-        if (!response.IsSuccessful || response.Data == null)
-        {
-            throw new Exception($"Erro ao buscar informações do CEP");
-        }
+        var response = await Client.ExecuteAsync<ViaCepDto>(request);
         return response.Data;
     }
 

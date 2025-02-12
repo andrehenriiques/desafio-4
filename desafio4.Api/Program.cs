@@ -11,10 +11,9 @@ var builder = WebApplication.CreateBuilder(args);
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddScoped<IPersonService, PersonService>();
-const string baseUrl = "https://viacep.com.br/ws";
+builder.Services.AddScoped<IPersonService, PersonService>(); 
 
-builder.Services.AddScoped<IViaCepRepository>(provider => new ViaCepRepository(baseUrl, null));
+builder.Services.AddScoped<IViaCepRepository, ViaCepRepository>();
 
 builder.Services.AddScoped<IAddressService, AddressService>();
 
