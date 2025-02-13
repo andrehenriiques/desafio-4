@@ -6,8 +6,8 @@ namespace Desafio4.Application.Services;
 
 public class AddressService(IViaCepRepository viaCepRepository) : IAddressService
 {
-    public Task<ViaCepDto> GetUserAddressByUserId(int id)
+    public async Task<ViaCepDto> GetUserAddressByUserId(int id)
     {
-        return viaCepRepository.GetUserAddressByUserId(id);
+        return await viaCepRepository.GetUserAddressByUserId(id);
     }
 }
